@@ -8,6 +8,7 @@ export const Container = styled.div`
     border-bottom: 2px solid gray;
     width: 100%;
     height: 100px;
+    background-color: #f37b00;
 `;
 export const LeftContainer = styled.div`
     display: flex;
@@ -22,6 +23,10 @@ export const LeftContainer = styled.div`
 export const Name = styled.div`
     display: flex;
     flex-direction: row;
+    align-items: center;
+    h5{
+        margin: 0;
+    }
 `;
 
 export const ButtonNav = styled.div`
