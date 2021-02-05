@@ -31,3 +31,9 @@ export const ImageContainer = styled.div`
         margin-right: 30px;
     }
 `;
+export const DogContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+`;
