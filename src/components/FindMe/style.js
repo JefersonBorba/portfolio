@@ -7,9 +7,15 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     border: 2px solid black;
-    img{
+    .map{
         width: 95%;
         margin: 20px;
+    }
+    .arrow{
+        position: absolute;
+        z-index: 1;
+        top: 2130px;
+        left: 100px;
     }
 `;
 
@@ -19,6 +25,6 @@ export const Title = styled.div`
     padding: 0 10px;
     z-index: 1;
     position: absolute;
-    top: 2140px;
+    top: 2000px;
     left: 60px;
 `;

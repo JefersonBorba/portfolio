@@ -1,5 +1,6 @@
-import { Container } from "./style"
-import Talking from "../../imgs/talking.jpeg"
+import { Container, ImageContainer } from "./style"
+import Talking from "../../imgs/bigjeff.png"
+import Dog from "../../imgs/happydog.gif"
 
 const About = () => {
     return (
@@ -11,7 +12,10 @@ const About = () => {
                     web development with more than 1000 hours.
                 </p>
             </div>
-            <img src={Talking} alt="An avatar talking"/>
+            <ImageContainer>
+                <img className="jeff" src={Talking} alt="An avatar talking"/>
+                <img className="dog nes-pointer" src={Dog} alt="Happy Dog"/>
+            </ImageContainer>
         </Container>
     )
 }

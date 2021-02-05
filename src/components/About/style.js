@@ -12,8 +12,22 @@ export const Container = styled.div`
         font-size: 12px;
         margin: 0;
     }
-    img{
+
+`;
+
+export const ImageContainer = styled.div`
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    .jeff{
+        height: 300px;
         width: 150px;
         margin: 0;
+    }
+    .dog{
+        height: 200px;
+        width: 200px;
+        margin-right: 30px;
     }
 `;

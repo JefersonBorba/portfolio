@@ -7,6 +7,7 @@ export const Container = styled.div`
     flex-direction: column;
     border: 2px solid black;
     padding-top: 20px;
+    margin-top: 50px;
 `;
 export const SkillHolder = styled.div`
     column-count: 2;
@@ -26,6 +27,6 @@ export const Title = styled.div`
     padding: 0 10px;
     z-index: 1;
     position: absolute;
-    top: 860px;
+    top: 720px;
     left: 60px;
 `;

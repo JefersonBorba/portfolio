@@ -12,18 +12,25 @@ export const Container = styled.div`
 `;
 export const LeftContainer = styled.div`
     display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+   
+`;
+
+export const Image = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+`;
+export const Name = styled.div`
+    display: flex;
     flex-direction: column;
-    margin-left: 30px;
+    align-items: center;
+    justify-content: center;
     p{
         font-size: 8px;
         margin: 0;
     }
-`;
-
-export const Name = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     h5{
         margin: 0;
     }
@@ -32,7 +39,7 @@ export const Name = styled.div`
 export const ButtonNav = styled.div`
     display: flex;
     flex-direction: row;
-    margin-right: 30px;
+    margin-right: 20px;
     img{
         width: 30px;
     }
