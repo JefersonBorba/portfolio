@@ -4,6 +4,7 @@ import About from "./components/About";
 import HardSkills from "./components/HardSkills";
 import SoftSkills from "./components/SoftSkills";
 import ContactMe from "./components/ContactMe";
+import CaseStudy from "./components/CaseStudy";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <About />
       <HardSkills />
       <SoftSkills />
+      <CaseStudy />
       <ContactMe />
     </Container>
   );
