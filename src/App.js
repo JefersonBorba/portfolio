@@ -5,6 +5,7 @@ import HardSkills from "./components/HardSkills";
 import SoftSkills from "./components/SoftSkills";
 import ContactMe from "./components/ContactMe";
 import CaseStudy from "./components/CaseStudy";
+import FindMe from "./components/FindMe";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <SoftSkills />
       <CaseStudy />
       <ContactMe />
+      <FindMe />
     </Container>
   );
 }
