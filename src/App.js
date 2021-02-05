@@ -6,6 +6,7 @@ import SoftSkills from "./components/SoftSkills";
 import ContactMe from "./components/ContactMe";
 import CaseStudy from "./components/CaseStudy";
 import FindMe from "./components/FindMe";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <CaseStudy />
       <ContactMe />
       <FindMe />
+      <Footer />
     </Container>
   );
 }
