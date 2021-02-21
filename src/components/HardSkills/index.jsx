@@ -1,69 +1,85 @@
 import {Container, Skill, Title, SkillHolder} from "./style"
+import {useState, useEffect} from "react";
 
 const HardSkills = () => {
+    const [width, setWidth] = useState(window.innerWidth);
+    const [iconSize, setIconSize] = useState("is-small");
+    useEffect(() => {
+        function handleResize() {
+            setWidth(window.innerWidth)
+          console.log(width)
+        }
+        window.addEventListener('resize', handleResize)
+
+        if(width > 700){
+            setIconSize("is-medium")
+        }else{
+            setIconSize("is-small")
+        }
+      }, [width])
     return (
         <Container>
-            <Title>HardSkills</Title>
+            <Title className="title">HardSkills</Title>
             <SkillHolder>
                 <Skill>
                     <p>HTML</p>
                     <div>
-                        <i class="nes-icon is-small star"></i>
-                        <i class="nes-icon is-small star"></i>
-                        <i class="nes-icon is-small star"></i>
-                        <i class="nes-icon is-small star"></i>
-                        <i class="nes-icon is-small star is-half"></i>
+                        <i className={`nes-icon ${iconSize} star`}></i>
+                        <i className={`nes-icon ${iconSize} star`}></i>
+                        <i className={`nes-icon ${iconSize} star`}></i>
+                        <i className={`nes-icon ${iconSize} star`}></i>
+                        <i className={`nes-icon ${iconSize} star is-half`}></i>
                     </div>
                     
                 </Skill>
                 <Skill>
                     <p>CSS</p>
                     <div>
-                        <i class="nes-icon is-small star"></i>
-                        <i class="nes-icon is-small star"></i>
-                        <i class="nes-icon is-small star"></i>
-                        <i class="nes-icon is-small star"></i>
-                        <i class="nes-icon is-small star is-half"></i>
+                        <i className={`nes-icon ${iconSize} star`}></i>
+                        <i className={`nes-icon ${iconSize} star`}></i>
+                        <i className={`nes-icon ${iconSize} star`}></i>
+                        <i className={`nes-icon ${iconSize} star`}></i>
+                        <i className={`nes-icon ${iconSize} star is-half`}></i>
                     </div>
                 </Skill>
                 <Skill>
                     <p>JS</p>
                     <div>
-                        <i class="nes-icon is-small star"></i>
-                        <i class="nes-icon is-small star"></i>
-                        <i class="nes-icon is-small star"></i>
-                        <i class="nes-icon is-small star"></i>
-                        <i class="nes-icon is-small star is-transparent"></i>
+                        <i className={`nes-icon ${iconSize} star`}></i>
+                        <i className={`nes-icon ${iconSize} star`}></i>
+                        <i className={`nes-icon ${iconSize} star`}></i>
+                        <i className={`nes-icon ${iconSize} star`}></i>
+                        <i className={`nes-icon ${iconSize} star is-transparent`}></i>
                     </div>
                 </Skill>
                 <Skill>
                     <p>React</p>
                     <div>
-                        <i class="nes-icon is-small star"></i>
-                        <i class="nes-icon is-small star"></i>
-                        <i class="nes-icon is-small star"></i>
-                        <i class="nes-icon is-small star"></i>
-                        <i class="nes-icon is-small star is-transparent"></i>
+                        <i className={`nes-icon ${iconSize} star`}></i>
+                        <i className={`nes-icon ${iconSize} star`}></i>
+                        <i className={`nes-icon ${iconSize} star`}></i>
+                        <i className={`nes-icon ${iconSize} star`}></i>
+                        <i className={`nes-icon ${iconSize} star is-trasparent`}></i>
                     </div>
                 </Skill>
                 <Skill>
                     <p>Git</p>
                     <div>
-                        <i class="nes-icon is-small star"></i>
-                        <i class="nes-icon is-small star"></i>
-                        <i class="nes-icon is-small star"></i>
-                        <i class="nes-icon is-small star is-half"></i>
-                        <i class="nes-icon is-small star is-transparent"></i>
+                        <i className={`nes-icon ${iconSize} star`}></i>
+                        <i className={`nes-icon ${iconSize} star`}></i>
+                        <i className={`nes-icon ${iconSize} star`}></i>
+                        <i className={`nes-icon ${iconSize} star is-half`}></i>
+                        <i className={`nes-icon ${iconSize} star is-trasparent`}></i>
                     </div>
                 </Skill>
                 <Skill>
                     <p>Python</p>
                     <div>
-                        <i class="nes-icon is-small star"></i>
-                        <i class="nes-icon is-small star"></i>
-                        <i class="nes-icon is-small star"></i>
-                        <i class="nes-icon is-small star is-half"></i>
-                        <i class="nes-icon is-small star is-transparent"></i>
+                        <i className={`nes-icon ${iconSize} star`}></i>
+                        <i className={`nes-icon ${iconSize} star`}></i>
+                        <i className={`nes-icon ${iconSize} star`}></i>
+                        <i className={`nes-icon ${iconSize} star is-half`}></i>
+                        <i className={`nes-icon ${iconSize} star is-trasparent`}></i>
                     </div>
                 </Skill>
             </SkillHolder>

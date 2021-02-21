@@ -14,8 +14,21 @@ export const Container = styled.div`
     .arrow{
         position: absolute;
         z-index: 1;
-        top: 2130px;
-        left: 100px;
+        top: 2190px;
+        left: 28%;
+    }
+    @media only screen and (min-width: 700px) {
+        width: 600px;
+        height: 400px;
+        .title{
+            left: 35%;
+            font-size: 25px;
+            top: 2326px;
+        }
+        .arrow{
+            top: 2595px;
+            left: 39.5%;
+        }
     }
 `;
 
@@ -25,6 +38,6 @@ export const Title = styled.div`
     padding: 0 10px;
     z-index: 1;
     position: absolute;
-    top: 2000px;
-    left: 60px;
+    top: 2062px;
+    left: 25%;
 `;

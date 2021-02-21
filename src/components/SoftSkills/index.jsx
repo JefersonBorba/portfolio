@@ -1,69 +1,86 @@
 import {Container, Skill, Title, SkillHolder} from "./style"
+import {useState, useEffect} from "react";
 
 const SoftSkills = () => {
+    const [width, setWidth] = useState(window.innerWidth);
+    const [iconSize, setIconSize] = useState("is-small");
+    useEffect(() => {
+        function handleResize() {
+            setWidth(window.innerWidth)
+          console.log(width)
+        }
+        window.addEventListener('resize', handleResize)
+
+        if(width > 700){
+            setIconSize("is-medium")
+        }else{
+            setIconSize("is-small")
+        }
+      }, [width])
+    
     return (
-        <Container>
-            <Title>SoftSkills</Title>
+        <Container className='container'>
+            <Title className="title">SoftSkills</Title>
             <SkillHolder>
                 <Skill>
                     <p>TeamWork</p>
                     <div>
-                        <i class="nes-icon is-small heart"></i>
-                        <i class="nes-icon is-small heart"></i>
-                        <i class="nes-icon is-small heart"></i>
-                        <i class="nes-icon is-small heart"></i>
-                        <i class="nes-icon is-small heart is-half"></i>
+                        <i className={`nes-icon ${iconSize} heart`}></i>
+                        <i className={`nes-icon ${iconSize} heart`}></i>
+                        <i className={`nes-icon ${iconSize} heart`}></i>
+                        <i className={`nes-icon ${iconSize} heart`}></i>
+                        <i className={`nes-icon ${iconSize} heart is-half`}></i>
                     </div>
                     
                 </Skill>
                 <Skill>
                     <p>Creative Thinking</p>
                     <div>
-                        <i class="nes-icon is-small heart"></i>
-                        <i class="nes-icon is-small heart"></i>
-                        <i class="nes-icon is-small heart"></i>
-                        <i class="nes-icon is-small heart"></i>
-                        <i class="nes-icon is-small heart is-half"></i>
+                        <i className={`nes-icon ${iconSize} heart`}></i>
+                        <i className={`nes-icon ${iconSize} heart`}></i>
+                        <i className={`nes-icon ${iconSize} heart`}></i>
+                        <i className={`nes-icon ${iconSize} heart`}></i>
+                        <i className={`nes-icon ${iconSize} heart is-half`}></i>
                     </div>
                 </Skill>
                 <Skill>
                     <p>Learning Skills</p>
                     <div>
-                        <i class="nes-icon is-small heart"></i>
-                        <i class="nes-icon is-small heart"></i>
-                        <i class="nes-icon is-small heart"></i>
-                        <i class="nes-icon is-small heart"></i>
-                        <i class="nes-icon is-small heart"></i>
+                        <i className={`nes-icon ${iconSize} heart`}></i>
+                        <i className={`nes-icon ${iconSize} heart`}></i>
+                        <i className={`nes-icon ${iconSize} heart`}></i>
+                        <i className={`nes-icon ${iconSize} heart`}></i>
+                        <i className={`nes-icon ${iconSize} heart`}></i>
                     </div>
                 </Skill>
                 <Skill>
                     <p>Networking</p>
                     <div>
-                        <i class="nes-icon is-small heart"></i>
-                        <i class="nes-icon is-small heart"></i>
-                        <i class="nes-icon is-small heart"></i>
-                        <i class="nes-icon is-small heart is-half"></i>
-                        <i class="nes-icon is-small heart is-transparent"></i>
+                        <i className={`nes-icon ${iconSize} heart`}></i>
+                        <i className={`nes-icon ${iconSize} heart`}></i>
+                        <i className={`nes-icon ${iconSize} heart`}></i>
+                        <i className={`nes-icon ${iconSize} heart is-half`}></i>
+                        <i className={`nes-icon ${iconSize} heart is-transparent`}></i>
                     </div>
                 </Skill>
                 <Skill>
                     <p>Time Management</p>
                     <div>
-                        <i class="nes-icon is-small heart"></i>
-                        <i class="nes-icon is-small heart"></i>
-                        <i class="nes-icon is-small heart"></i>
-                        <i class="nes-icon is-small heart"></i>
-                        <i class="nes-icon is-small heart is-half"></i>
+                        <i className={`nes-icon ${iconSize} heart`}></i>
+                        <i className={`nes-icon ${iconSize} heart`}></i>
+                        <i className={`nes-icon ${iconSize} heart`}></i>
+                        <i className={`nes-icon ${iconSize} heart`}></i>
+                        <i className={`nes-icon ${iconSize} heart is-half`}></i>
                     </div>
                 </Skill>
                 <Skill>
                     <p>Conflict Resolution</p>
                     <div>
-                        <i class="nes-icon is-small heart"></i>
-                        <i class="nes-icon is-small heart"></i>
-                        <i class="nes-icon is-small heart"></i>
-                        <i class="nes-icon is-small heart is-half"></i>
-                        <i class="nes-icon is-small heart is-transparent"></i>
+                        <i className={`nes-icon ${iconSize} heart`}></i>
+                        <i className={`nes-icon ${iconSize} heart`}></i>
+                        <i className={`nes-icon ${iconSize} heart`}></i>
+                        <i className={`nes-icon ${iconSize} heart is-half`}></i>
+                        <i className={`nes-icon ${iconSize} heart is-transparent`}></i>
                     </div>
                 </Skill>
             </SkillHolder>

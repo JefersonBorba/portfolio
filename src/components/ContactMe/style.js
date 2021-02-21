@@ -10,6 +10,16 @@ export const Container = styled.div`
     padding-top: 20px;
     margin: 20px;
     padding: 10px;
+    @media only screen and (min-width: 700px) {
+        width: 600px;
+        height: 450px;
+        font-size: 20px;
+        .title{
+            left: 35%;
+            font-size: 25px;
+            top: 1856px;
+        }
+    }
 `;
 export const Title = styled.div`
     background-color: white;
@@ -17,6 +27,6 @@ export const Title = styled.div`
     padding: 0 10px;
     z-index: 1;
     position: absolute;
-    top: 1580px;
-    left: 60px;
+    top: 1642px;
+    left: 25%;
 `;

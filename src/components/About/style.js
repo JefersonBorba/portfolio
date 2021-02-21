@@ -6,7 +6,13 @@ export const Container = styled.div`
     .nes-balloon{
         margin-left: 50px;
         margin-right: 20px;
+        width: 300px;
         padding: 10px;
+    }
+    @media only screen and (min-width: 700px) {
+        .nes-balloon{
+            width: 600px;
+        }
     }
     p{
         font-size: 12px;

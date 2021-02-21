@@ -8,6 +8,18 @@ export const Container = styled.div`
     border: 2px solid black;
     padding-top: 20px;
     margin-top: 50px;
+    @media only screen and (min-width: 700px) {
+        width: 600px;
+        height: 300px;
+        p{
+            font-size: 20px;
+        }
+        .title{
+            left: 35%;
+            font-size: 25px;
+            top: 698px;
+        }
+    }
 `;
 export const SkillHolder = styled.div`
     column-count: 2;
@@ -27,6 +39,6 @@ export const Title = styled.div`
     padding: 0 10px;
     z-index: 1;
     position: absolute;
-    top: 720px;
-    left: 60px;
+    top: 940px;
+    left: 25%;
 `;

@@ -10,12 +10,14 @@ const Header = () => {
                     <img src={Profile} alt="Profile" />
                 </Image>
                 <Name>
-                    <h5>Jeferson Borba</h5>
+                    <h5 id="back-to-start">Jeferson Borba</h5>
                     <p>Front End Web Developer</p>
                 </Name>
             </LeftContainer>
             <ButtonNav>
-                <img className="nes-pointer" src={Menu} alt="Menu"/>
+                <a href="#case-study">
+                    <img className="nes-pointer" src={Menu} alt="Menu"/>
+                </a>
             </ButtonNav>
         </Container>
     )

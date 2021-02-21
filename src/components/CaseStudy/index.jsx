@@ -4,8 +4,7 @@ import Placeholder from "../../imgs/csplaceholder.jpeg"
 const CaseStudy = () => {
     return (
         <Container>
-            <Title>CaseStudy</Title>
-            <img src={Placeholder} alt="project placeholder"/>
+            <Title className="title"><span id="case-study">CaseStudy</span></Title>
             <img src={Placeholder} alt="project placeholder"/>
         </Container>
     )

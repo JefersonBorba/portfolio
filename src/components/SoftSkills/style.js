@@ -8,6 +8,26 @@ export const Container = styled.div`
     border: 2px solid black;
     padding-top: 20px;
     margin: 20px;
+    p{
+        margin:0;
+        font-size: 10px;
+    }
+    @media only screen and (min-width: 700px) {
+        .title{
+        }
+    }
+    @media only screen and (min-width: 700px) {
+        width: 600px;
+        height: 350px;
+        p{
+            font-size: 20px;
+        }
+        .title{
+            left: 35%;
+            font-size: 25px;
+            top: 1016px;
+        }
+    }
 `;
 export const SkillHolder = styled.div`
     column-count: 2;
@@ -17,10 +37,7 @@ export const SkillHolder = styled.div`
 export const Skill = styled.div`
     display: flex;
     flex-direction: column;
-    p{
-        margin:0;
-        font-size: 10px;
-    }
+    
 `;
 export const Title = styled.div`
     background-color: white;
@@ -28,6 +45,6 @@ export const Title = styled.div`
     padding: 0 10px;
     z-index: 1;
     position: absolute;
-    top: 940px;
-    left: 60px;
+    top: 1157px;
+    left: 25%;
 `;
