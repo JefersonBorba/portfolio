@@ -7,7 +7,6 @@ const HardSkills = () => {
     useEffect(() => {
         function handleResize() {
             setWidth(window.innerWidth)
-          console.log(width)
         }
         window.addEventListener('resize', handleResize)
 
@@ -59,7 +58,7 @@ const HardSkills = () => {
                         <i className={`nes-icon ${iconSize} star`}></i>
                         <i className={`nes-icon ${iconSize} star`}></i>
                         <i className={`nes-icon ${iconSize} star`}></i>
-                        <i className={`nes-icon ${iconSize} star is-trasparent`}></i>
+                        <i className={`nes-icon ${iconSize} star is-transparent`}></i>
                     </div>
                 </Skill>
                 <Skill>
@@ -69,7 +68,7 @@ const HardSkills = () => {
                         <i className={`nes-icon ${iconSize} star`}></i>
                         <i className={`nes-icon ${iconSize} star`}></i>
                         <i className={`nes-icon ${iconSize} star is-half`}></i>
-                        <i className={`nes-icon ${iconSize} star is-trasparent`}></i>
+                        <i className={`nes-icon ${iconSize} star is-transparent`}></i>
                     </div>
                 </Skill>
                 <Skill>
@@ -79,7 +78,7 @@ const HardSkills = () => {
                         <i className={`nes-icon ${iconSize} star`}></i>
                         <i className={`nes-icon ${iconSize} star`}></i>
                         <i className={`nes-icon ${iconSize} star is-half`}></i>
-                        <i className={`nes-icon ${iconSize} star is-trasparent`}></i>
+                        <i className={`nes-icon ${iconSize} star is-transparent`}></i>
                     </div>
                 </Skill>
             </SkillHolder>

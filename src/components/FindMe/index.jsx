@@ -1,13 +1,11 @@
 import {Container, Title} from "./style";
-import Map from "../../imgs/map.jpeg"
-import Arrow from "../../imgs/locationarrow.gif"
+import Map from "../../imgs/map.gif"
 
-const FindMe = () => {
+const FindMe = ({setModalMap}) => {
     return (
         <Container>
             <Title className="title">FindMe</Title>
-            <img className="map" src={Map} alt="Map" />
-            <img className="arrow nes-pointer" src={Arrow} alt="pointer" />
+            <img className="map nes-pointer" src={Map} alt="Where to find me" onClick={() => setModalMap(true)}/>
         </Container>
     )
 }

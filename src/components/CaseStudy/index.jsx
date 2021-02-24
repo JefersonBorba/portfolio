@@ -1,11 +1,11 @@
 import {Container, Title} from "./style";
-import Placeholder from "../../imgs/csplaceholder.jpeg"
+import KenzieHub from "../../imgs/kenziehub.png"
 
 const CaseStudy = () => {
     return (
         <Container>
             <Title className="title"><span id="case-study">CaseStudy</span></Title>
-            <img src={Placeholder} alt="project placeholder"/>
+            <img src={KenzieHub} alt="project placeholder"/>
         </Container>
     )
 }

@@ -1,14 +1,16 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+    transition: height .3s;
+    position: fixed;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid gray;
     width: 100%;
-    height: 100px;
     background-color: #f37b00;
+    z-index: 5;
 `;
 export const LeftContainer = styled.div`
     display: flex;

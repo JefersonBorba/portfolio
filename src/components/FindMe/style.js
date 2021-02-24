@@ -11,12 +11,6 @@ export const Container = styled.div`
         width: 95%;
         margin: 20px;
     }
-    .arrow{
-        position: absolute;
-        z-index: 1;
-        top: 2190px;
-        left: 28%;
-    }
     @media only screen and (min-width: 700px) {
         width: 600px;
         height: 400px;
@@ -24,10 +18,6 @@ export const Container = styled.div`
             left: 35%;
             font-size: 25px;
             top: 2326px;
-        }
-        .arrow{
-            top: 2595px;
-            left: 39.5%;
         }
     }
 `;

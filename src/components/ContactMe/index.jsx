@@ -1,6 +1,6 @@
 import { Container, Title } from "./style";
 
-const ContactMe = () => {
+const ContactMe = ({setFormError}) => {
     return(
         <Container>
             <Title className="title">ContactMe</Title>
@@ -16,7 +16,7 @@ const ContactMe = () => {
                 <label htmlFor="textarea_field">Your message</label>
                 <textarea id="textarea_field" className="nes-textarea"></textarea>
             </div>
-            <button type="button" className="nes-btn is-primary">Send message</button>
+            <button type="button" className="nes-btn is-primary" onClick={() => setFormError(true)}>Send message</button>
         </Container>
     )
 }

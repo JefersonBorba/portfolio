@@ -10,6 +10,7 @@ export const Container = styled.div`
         width: 98%;
         padding: 5px;
         margin-top: 20px;
+        object-fit: cover;
     }
     @media only screen and (min-width: 700px) {
         width: 600px;
