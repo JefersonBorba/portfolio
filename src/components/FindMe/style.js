@@ -28,6 +28,6 @@ export const Title = styled.div`
     padding: 0 10px;
     z-index: 1;
     position: absolute;
-    top: 2062px;
+    top: 1996px;
     left: 25%;
 `;
