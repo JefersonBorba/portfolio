@@ -18,7 +18,7 @@ const HardSkills = () => {
       }, [width])
     return (
         <Container>
-            <Title className="title">HardSkills</Title>
+            <Title className="title" id="hard-skills">HardSkills</Title>
             <SkillHolder>
                 <Skill>
                     <p>HTML</p>

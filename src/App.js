@@ -11,7 +11,8 @@ import ModalFormError from "./components/ModalFormError";
 import Footer from "./components/Footer";
 import EasterEgg from "./imgs/smalljeff.png"
 import ModalEasterEgg from "./components/ModalEasterEgg";
-import ModalMap from "./components/ModalMap/ModalMap";
+import ModalMap from "./components/ModalMap";
+import Dropdown from "./components/Dropdown"
 
 const App = () => {
   const [showEasteregg, setShowEasteregg] = useState(false);
@@ -20,6 +21,7 @@ const App = () => {
   const [modalEasterEgg, setModalEasterEgg] = useState(false);
   const [modalMap, setModalMap] = useState(false);
   const [headerHeight, setHeaderHeight] = useState("100px");
+  const [displayDropdown, setDisplayDropdown] = useState("-250px")
   function myFunction() {
     if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
       setShowEasteregg(true);
@@ -36,18 +38,14 @@ const App = () => {
 
   window.onscroll = function() {myFunction()};
 
-
-  console.log("------------------------------------------")
-  console.log("----------Half-Life 3 Confirmed-----------")
-  console.log("------------------------------------------")
-  
   return (
     <Container className="App">
       <img className={`easteregg nes-pointer ${showEasteregg ? "show" : "dontshow"}`} src={EasterEgg} alt="EasterEgg button" onClick={() => setModalEasterEgg(true)}/>
-      <a href="#back-to-start" className={`get-back-hidden ${backButton && "get-back"}`}>
+      <a href="#" className={`get-back-hidden ${backButton && "get-back"}`}>
         <button type="button" className="nes-btn is-primary">/\</button>
       </a>
-      <Header headerHeight={headerHeight} />
+      <Header headerHeight={headerHeight} setDisplayDropdown={setDisplayDropdown} displayDropdown={displayDropdown} />
+      <Dropdown displayDropdown={displayDropdown} setDisplayDropdown={setDisplayDropdown} headerHeight={headerHeight}/>
       <About />
       <HardSkills />
       <SoftSkills />

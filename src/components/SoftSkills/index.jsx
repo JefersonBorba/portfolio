@@ -19,7 +19,7 @@ const SoftSkills = () => {
     
     return (
         <Container className='container'>
-            <Title className="title">SoftSkills</Title>
+            <Title className="title" id="soft-skills">SoftSkills</Title>
             <SkillHolder>
                 <Skill>
                     <p>TeamWork</p>

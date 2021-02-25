@@ -10,7 +10,7 @@ const About = () => {
     havePet && setTimeout(() => setHavePet(false), 1000)
     return (
         <Container>
-            <div id="back-to-start" className="nes-balloon from-left">
+            <div className="nes-balloon from-left">
                 <p>
                     Hello, my name is Jeferson and I'm a frontend developer with skills in HTML, CSS, JavaScript, React, Redux and GIT. 
                     I'm passionate about tech and have been studying programming for a couple of years and I do believe that I'm ready for any challenge. 

@@ -39,10 +39,30 @@ export const Name = styled.div`
 `;
 
 export const ButtonNav = styled.div`
-    display: flex;
-    flex-direction: row;
-    margin-right: 20px;
     img{
         width: 30px;
+        margin-right: 20px;
+    }
+    div{
+        display: flex;
+        flex-direction: row;
+        width: 65vw;
+        justify-content: space-evenly;
+        @media only screen and (max-width: 1250px) {
+            width: 70vw;
+    }
+    button{
+        color: black;
+        background-color: orange;
+        font-size: 12px;
+    }
+    .biggerbutton{
+        font-size: 16px;
+    }
+    .nes-btn{
+        transition: font-size 0.3s;
+    }
+    a{
+        
     }
 `;
