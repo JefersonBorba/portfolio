@@ -13,4 +13,12 @@ export const Container = styled.div`
     background-color: white;
     margin-top: 5%;
     padding: 20px;
+    margin-top: 100px;
+    font-size: 10px;
+    @media only screen and (min-width: 700px) {
+        width: 70vw;
+        height: 70vh;
+        font-size: 14px;
+        
+    }
 `;
