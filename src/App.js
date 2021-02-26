@@ -1,5 +1,5 @@
 import { Container } from "./style";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import Header from "./components/Header";
 import About from "./components/About";
 import HardSkills from "./components/HardSkills";
@@ -7,7 +7,7 @@ import SoftSkills from "./components/SoftSkills";
 import ContactMe from "./components/ContactMe";
 import CaseStudy from "./components/CaseStudy";
 import FindMe from "./components/FindMe";
-import ModalFormError from "./components/ModalFormError";
+import ModalProject from "./components/ModalProject";
 import Footer from "./components/Footer";
 import EasterEgg from "./imgs/smalljeff.png"
 import ModalEasterEgg from "./components/ModalEasterEgg";
@@ -18,13 +18,14 @@ import SnackBar from "./components/SnackBar";
 const App = () => {
   const [showEasteregg, setShowEasteregg] = useState(false);
   const [backButton, setBackButton] = useState(false);
-  const [formError, setFormError] = useState(false);
+  const [projectDetails, setProjectDetails] = useState(false);
   const [modalEasterEgg, setModalEasterEgg] = useState(false);
   const [modalMap, setModalMap] = useState(false);
   const [headerHeight, setHeaderHeight] = useState("100px");
   const [displayDropdown, setDisplayDropdown] = useState("-250px")
   const [snackMessage, setSnackMessage] = useState("");
   const [displaySnack, setDisplaySnack] = useState(false);
+  const [projectDescription, setProjectDescription] = useState()
   function myFunction() {
     if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
       setShowEasteregg(true);
@@ -41,10 +42,6 @@ const App = () => {
 
   window.onscroll = function() {myFunction()};
 
-  useEffect(() => {
-    console.log(displaySnack)
-  }, [displaySnack])
-
   return (
     <Container className="App">
       <img className={`easteregg nes-pointer ${showEasteregg ? "show" : "dontshow"}`} src={EasterEgg} alt="EasterEgg button" onClick={() => setModalEasterEgg(true)}/>
@@ -58,9 +55,9 @@ const App = () => {
       <SoftSkills />
       {modalMap && <ModalMap setModalMap={setModalMap} />}
       {modalEasterEgg && <ModalEasterEgg setModalEasterEgg={setModalEasterEgg} />}
-      <CaseStudy />
-      {formError && <ModalFormError setFormError={setFormError} />}
-      <ContactMe setFormError={setFormError} setSnackMessage={setSnackMessage} setDisplaySnack={setDisplaySnack}/>
+      <CaseStudy setProjectDetails={setProjectDetails} setProjectDescription={setProjectDescription}/>
+      {projectDetails && <ModalProject setProjectDetails={setProjectDetails} projectDescription={projectDescription}/>}
+      <ContactMe setSnackMessage={setSnackMessage} setDisplaySnack={setDisplaySnack}/>
       <FindMe setModalMap={setModalMap}/>
       <Footer />
       <SnackBar snackMessage={snackMessage} displaySnack={displaySnack}/>

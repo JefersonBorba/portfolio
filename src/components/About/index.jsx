@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import {useState} from "react";
 import { Container, ImageContainer, DogContainer } from "./style"
 import Talking from "../../imgs/bigjeff.png"
 import Dog from "../../imgs/happydog.gif"
