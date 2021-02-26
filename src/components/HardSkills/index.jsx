@@ -5,7 +5,7 @@ const HardSkills = () => {
     const [width, setWidth] = useState(window.innerWidth);
     const [iconSize, setIconSize] = useState("is-small");
     useEffect(() => {
-        function handleResize() {
+        const handleResize = () => {
             setWidth(window.innerWidth)
         }
         window.addEventListener('resize', handleResize)

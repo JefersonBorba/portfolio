@@ -1,13 +1,8 @@
 import { Container, Title } from "./style";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import { useState } from "react";
 
-const ContactMe = ({setFormError, setSnackMessage, setDisplaySnack}) => {
-    const [clearNome, setClearNome] = useState("");
-    const [clearSender, setClearSender] = useState("")
-    const [clearMessage, setClearMessage] = useState("")
-
+const ContactMe = ({setSnackMessage, setDisplaySnack}) => {
     const { register, handleSubmit } = useForm();
     const senderData = {
         email: "contato@jefersonborba.dev",

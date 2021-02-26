@@ -7,7 +7,7 @@ const ModalMap = ({setModalMap}) => {
             <p>Country: Brazil</p>
             <p>State: Rio Grande do Sul</p>
             <p>City: Nova Araçá</p>
-            <button type="button" class="nes-btn is-primary" onClick={() => setModalMap(false)}>I agree not to stalk you</button>
+            <button type="button" className="nes-btn is-primary" onClick={() => setModalMap(false)}>I agree not to stalk you</button>
         </Container>
     )
 }

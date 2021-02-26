@@ -32,19 +32,19 @@ const Header = ({headerHeight, setDisplayDropdown, displayDropdown}) => {
                 {!changeButtons &&
                     (<div>
                         <a href="#hard-skills">
-                        <button type="button" class={`nes-btn ${headerHeight === "100px" ? "biggerbutton" : ""}`}>HardSkills</button>
+                        <button type="button" className={`nes-btn ${headerHeight === "100px" ? "biggerbutton" : ""}`}>HardSkills</button>
                         </a>
                         <a href="#soft-skills">
-                        <button type="button" class={`nes-btn ${headerHeight === "100px" ? "biggerbutton" : ""}`}>SoftSkills</button>
+                        <button type="button" className={`nes-btn ${headerHeight === "100px" ? "biggerbutton" : ""}`}>SoftSkills</button>
                         </a>
                         <a href="#case-study">
-                        <button type="button" class={`nes-btn ${headerHeight === "100px" ? "biggerbutton" : ""}`}>CaseStudy</button>
+                        <button type="button" className={`nes-btn ${headerHeight === "100px" ? "biggerbutton" : ""}`}>CaseStudy</button>
                         </a>
                         <a href="#contact-me">
-                        <button type="button" class={`nes-btn ${headerHeight === "100px" ? "biggerbutton" : ""}`}>ContactMe</button>
+                        <button type="button" className={`nes-btn ${headerHeight === "100px" ? "biggerbutton" : ""}`}>ContactMe</button>
                         </a>
                         <a href="#find-me">
-                        <button type="button" class={`nes-btn ${headerHeight === "100px" ? "biggerbutton" : ""}`}>FindMe</button>
+                        <button type="button" className={`nes-btn ${headerHeight === "100px" ? "biggerbutton" : ""}`}>FindMe</button>
                         </a>
                     </div>)
                 }
