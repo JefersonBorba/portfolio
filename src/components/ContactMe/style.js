@@ -3,13 +3,18 @@ import styled from "styled-components";
 export const Container = styled.div`
     height: 400px;
     width: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
     border: 2px solid black;
     padding-top: 20px;
     margin: 20px;
-    padding: 10px;
+    padding: 20px;
+    button{
+        margin-top: 20px;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
     @media only screen and (min-width: 700px) {
         width: 600px;
         height: 450px;
