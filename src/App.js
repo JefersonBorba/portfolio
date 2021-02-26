@@ -1,5 +1,5 @@
 import { Container } from "./style";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import Header from "./components/Header";
 import About from "./components/About";
 import HardSkills from "./components/HardSkills";
@@ -13,6 +13,7 @@ import EasterEgg from "./imgs/smalljeff.png"
 import ModalEasterEgg from "./components/ModalEasterEgg";
 import ModalMap from "./components/ModalMap";
 import Dropdown from "./components/Dropdown"
+import SnackBar from "./components/SnackBar";
 
 const App = () => {
   const [showEasteregg, setShowEasteregg] = useState(false);
@@ -22,6 +23,8 @@ const App = () => {
   const [modalMap, setModalMap] = useState(false);
   const [headerHeight, setHeaderHeight] = useState("100px");
   const [displayDropdown, setDisplayDropdown] = useState("-250px")
+  const [snackMessage, setSnackMessage] = useState("");
+  const [displaySnack, setDisplaySnack] = useState(false);
   function myFunction() {
     if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
       setShowEasteregg(true);
@@ -38,6 +41,10 @@ const App = () => {
 
   window.onscroll = function() {myFunction()};
 
+  useEffect(() => {
+    console.log(displaySnack)
+  }, [displaySnack])
+
   return (
     <Container className="App">
       <img className={`easteregg nes-pointer ${showEasteregg ? "show" : "dontshow"}`} src={EasterEgg} alt="EasterEgg button" onClick={() => setModalEasterEgg(true)}/>
@@ -53,9 +60,10 @@ const App = () => {
       {modalEasterEgg && <ModalEasterEgg setModalEasterEgg={setModalEasterEgg} />}
       <CaseStudy />
       {formError && <ModalFormError setFormError={setFormError} />}
-      <ContactMe setFormError={setFormError}/>
+      <ContactMe setFormError={setFormError} setSnackMessage={setSnackMessage} setDisplaySnack={setDisplaySnack}/>
       <FindMe setModalMap={setModalMap}/>
       <Footer />
+      <SnackBar snackMessage={snackMessage} displaySnack={displaySnack}/>
     </Container>
   );
 }
