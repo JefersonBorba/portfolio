@@ -1,8 +1,12 @@
 import { Container, Title } from "./style";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { useState } from "react";
 
-const ContactMe = ({setFormError}) => {
+const ContactMe = ({setFormError, setSnackMessage, setDisplaySnack}) => {
+    const [clearNome, setClearNome] = useState("");
+    const [clearSender, setClearSender] = useState("")
+    const [clearMessage, setClearMessage] = useState("")
 
     const { register, handleSubmit } = useForm();
     const senderData = {
@@ -18,14 +22,27 @@ const ContactMe = ({setFormError}) => {
     };
 
     const sendMessage = (data) => {
+        setSnackMessage("Sending Message")
+        setDisplaySnack(true)
+        document.getElementById("form").reset()
         axios.post("https://api.sendwithses.com/send-email", data, {headers: {'x-api-key': "a2aa10acPyVacc7ScWXNaaLyo4iOuaefFxVA3pkDHIk2ZwHya5lMtKXbRmE6"}})
-        .then((res) => console.log(res))
-        .catch((err) => console.log(err))
+        .then(() => {
+            setDisplaySnack(false);
+            window.setTimeout(() => setSnackMessage("Message Sent"), 1000);
+            window.setTimeout(() => setDisplaySnack(true), 1000);
+            window.setTimeout(() => setDisplaySnack(false), 3000);
+        })
+        .catch(() => {
+            setDisplaySnack(false);
+            window.setTimeout(() => setSnackMessage("An Error Occurred"), 1000);
+            window.setTimeout(() => setDisplaySnack(true), 1000);
+            window.setTimeout(() => setDisplaySnack(false), 3000);
+        })
     }
     return(
         <Container>
             <Title className="title" id="contact-me">ContactMe</Title>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(onSubmit)} id="form">
                 <div className="nes-field">
                     <label htmlFor="name_field">Your name</label>
                     <input type="text" id="name_field" className="nes-input" name="nome" ref={register({ required: true, maxLength: 20 })} />
@@ -38,7 +55,7 @@ const ContactMe = ({setFormError}) => {
                     <label htmlFor="textarea_field">Your message</label>
                     <textarea id="textarea_field" className="nes-textarea" name="message" ref={register({ required: true, maxLength: 120 })}></textarea>
                 </div>
-                <button type="submit" className="nes-btn is-primary" onClick={() => setFormError(true)}>Send message</button>
+                <button type="submit" className="nes-btn is-primary" >Send message</button>
             </form>
         </Container>
     )
