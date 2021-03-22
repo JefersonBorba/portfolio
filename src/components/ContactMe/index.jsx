@@ -48,7 +48,7 @@ const ContactMe = ({setSnackMessage, setDisplaySnack}) => {
                 </div>
                 <div className="nes-field">
                     <label htmlFor="textarea_field">Your message</label>
-                    <textarea id="textarea_field" className="nes-textarea" name="message" ref={register({ required: true, maxLength: 120 })}></textarea>
+                    <textarea id="textarea_field" className="nes-textarea" name="message" ref={register({ required: true, maxLength: 5000 })}></textarea>
                 </div>
                 <button type="submit" className="nes-btn is-primary" >Send Message</button>
             </form>

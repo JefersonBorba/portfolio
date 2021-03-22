@@ -10,21 +10,26 @@ export const Container = styled.div`
     height: 250px;
     justify-content: space-evenly;
     .carousel{
-        position:relative;
+        width: 100%;
+        position: relative;
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: flex-start;
         transition: left 0.3s;
     }
     img{
-        width: 98%;
+        width: 290px;
         padding: 5px;
         margin-left 5px;
         margin-top: 20px;
     }
     @media only screen and (min-width: 700px) {
-        width: 600px;
+        width: 590px;
         height: 450px;
+        img{
+            width: 580px;
+        }
         .title{
             left: 35%;
             font-size: 25px;
