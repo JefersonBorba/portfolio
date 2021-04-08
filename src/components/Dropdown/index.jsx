@@ -1,6 +1,19 @@
+import {useState, useEffect} from "react"
 import { Container } from "./style"
 
 const Dropdown = ({displayDropdown, setDisplayDropdown, headerHeight}) => {
+
+    const [width, setWidth] = useState(window.innerWidth)
+    useEffect(() => {
+        function handleResize() {
+            setWidth(window.innerWidth)
+        }
+        window.addEventListener('resize', handleResize)
+        if(width > 1000){
+            setDisplayDropdown("-250px")
+        }
+      }, [width])
+
     return (
         <Container style={{right: displayDropdown, top: headerHeight}}>
             <a href="#hard-skills" onClick={() => setDisplayDropdown("-250px")}>
