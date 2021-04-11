@@ -16,11 +16,8 @@ const Dropdown = ({displayDropdown, setDisplayDropdown, headerHeight}) => {
 
     return (
         <Container style={{right: displayDropdown, top: headerHeight}}>
-            <a href="#hard-skills" onClick={() => setDisplayDropdown("-250px")}>
-                <div className="sidebutton nes-pointer">HardSkills</div>
-            </a>
-            <a href="#soft-skills" onClick={() => setDisplayDropdown("-250px")}>
-                <div className="sidebutton nes-pointer">SoftSkills</div>
+            <a href="#skill-set" onClick={() => setDisplayDropdown("-250px")}>
+                <div className="sidebutton nes-pointer">SkillSet</div>
             </a>
             <a href="#case-study" onClick={() => setDisplayDropdown("-250px")}>
                 <div className="sidebutton nes-pointer">CaseStudy</div>

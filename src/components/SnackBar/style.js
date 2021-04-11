@@ -7,10 +7,12 @@ export const Container = styled.div`
     align-items: center;
     width: 300px;
     height: 60px;
-    left: 40%;
     z-index: 50;
     position: fixed;
     background-color: white;
     border: 2px solid black;
     transition: bottom 0.3s;
+    img{
+        width: 50px;
+    }
 `;

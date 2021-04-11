@@ -2,7 +2,7 @@ import { Container, Title } from "./style";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 
-const ContactMe = ({setSnackMessage, setDisplaySnack}) => {
+const ContactMe = ({setSnackMessage, setDisplaySnack, setSelectedCaramelo}) => {
     const { register, handleSubmit } = useForm();
     const senderData = {
         email: "contato@jefersonborba.dev",
@@ -18,20 +18,23 @@ const ContactMe = ({setSnackMessage, setDisplaySnack}) => {
 
     const sendMessage = (data) => {
         setSnackMessage("Sending Message")
+        setSelectedCaramelo(0)
         setDisplaySnack(true)
         document.getElementById("form").reset()
         axios.post("https://api.sendwithses.com/send-email", data, {headers: {'x-api-key': "a2aa10acPyVacc7ScWXNaaLyo4iOuaefFxVA3pkDHIk2ZwHya5lMtKXbRmE6"}})
         .then(() => {
             setDisplaySnack(false);
+            window.setTimeout(() => setSelectedCaramelo(1), 1000);
             window.setTimeout(() => setSnackMessage("Message Sent"), 1000);
             window.setTimeout(() => setDisplaySnack(true), 1000);
             window.setTimeout(() => setDisplaySnack(false), 3000);
         })
         .catch(() => {
             setDisplaySnack(false);
+            setSelectedCaramelo(2)
             window.setTimeout(() => setSnackMessage("An Error Occurred"), 1000);
             window.setTimeout(() => setDisplaySnack(true), 1000);
-            window.setTimeout(() => setDisplaySnack(false), 3000);
+            window.setTimeout(() => setDisplaySnack(false), 6000);
         })
     }
     return(

@@ -22,7 +22,7 @@ export const Container = styled.div`
         .title{
             left: 35%;
             font-size: 25px;
-            top: 1856px;
+            top: 1440px;
         }
     }
 `;
@@ -32,6 +32,6 @@ export const Title = styled.div`
     padding: 0 10px;
     z-index: 1;
     position: absolute;
-    top: 1648px;
+    top: 1694px;
     left: 25%;
 `;
