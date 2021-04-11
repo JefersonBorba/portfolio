@@ -31,11 +31,8 @@ const Header = ({headerHeight, setDisplayDropdown, displayDropdown}) => {
             <ButtonNav>
                 {!changeButtons &&
                     (<div>
-                        <a href="#hard-skills">
-                        <button type="button" className={`nes-btn ${headerHeight === "100px" ? "biggerbutton" : ""}`}>HardSkills</button>
-                        </a>
-                        <a href="#soft-skills">
-                        <button type="button" className={`nes-btn ${headerHeight === "100px" ? "biggerbutton" : ""}`}>SoftSkills</button>
+                        <a href="#skill-set">
+                        <button type="button" className={`nes-btn ${headerHeight === "100px" ? "biggerbutton" : ""}`}>SkillSet</button>
                         </a>
                         <a href="#case-study">
                         <button type="button" className={`nes-btn ${headerHeight === "100px" ? "biggerbutton" : ""}`}>CaseStudy</button>

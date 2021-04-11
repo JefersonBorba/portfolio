@@ -28,7 +28,7 @@ export const Container = styled.div`
         .title{
             left: 35%;
             font-size: 25px;
-            top: 1387px;
+            top: 972px;
         }
     }
     .changer{
@@ -49,6 +49,6 @@ export const Title = styled.div`
     padding: 0 10px;
     z-index: 2;
     position: absolute;
-    top: 1376px;
+    top: 1424px;
     left: 25%;
 `;

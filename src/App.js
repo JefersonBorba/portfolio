@@ -2,8 +2,7 @@ import { Container } from "./style";
 import {useState} from "react";
 import Header from "./components/Header";
 import About from "./components/About";
-import HardSkills from "./components/HardSkills";
-import SoftSkills from "./components/SoftSkills";
+import SkillSet from "./components/SkillSet";
 import ContactMe from "./components/ContactMe";
 import CaseStudy from "./components/CaseStudy";
 import FindMe from "./components/FindMe";
@@ -24,6 +23,7 @@ const App = () => {
   const [headerHeight, setHeaderHeight] = useState("100px");
   const [displayDropdown, setDisplayDropdown] = useState("-250px")
   const [snackMessage, setSnackMessage] = useState("");
+  const [selectedCaramelo, setSelectedCaramelo] = useState(2)
   const [displaySnack, setDisplaySnack] = useState(false);
   const [projectDescription, setProjectDescription] = useState()
   function myFunction() {
@@ -51,16 +51,15 @@ const App = () => {
       <Header headerHeight={headerHeight} setDisplayDropdown={setDisplayDropdown} displayDropdown={displayDropdown} />
       <Dropdown displayDropdown={displayDropdown} setDisplayDropdown={setDisplayDropdown} headerHeight={headerHeight}/>
       <About />
-      <HardSkills />
-      <SoftSkills />
+      <SkillSet />
       {modalMap && <ModalMap setModalMap={setModalMap} />}
       {modalEasterEgg && <ModalEasterEgg setModalEasterEgg={setModalEasterEgg} />}
       <CaseStudy setProjectDetails={setProjectDetails} setProjectDescription={setProjectDescription}/>
       {projectDetails && <ModalProject setProjectDetails={setProjectDetails} projectDescription={projectDescription}/>}
-      <ContactMe setSnackMessage={setSnackMessage} setDisplaySnack={setDisplaySnack}/>
+      <ContactMe setSnackMessage={setSnackMessage} setDisplaySnack={setDisplaySnack} setSelectedCaramelo={setSelectedCaramelo}/>
       <FindMe setModalMap={setModalMap}/>
       <Footer />
-      <SnackBar snackMessage={snackMessage} displaySnack={displaySnack}/>
+      <SnackBar snackMessage={snackMessage} displaySnack={displaySnack} selectedCaramelo={selectedCaramelo}/>
     </Container>
   );
 }

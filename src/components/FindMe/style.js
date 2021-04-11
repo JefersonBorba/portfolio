@@ -17,7 +17,7 @@ export const Container = styled.div`
         .title{
             left: 35%;
             font-size: 25px;
-            top: 2326px;
+            top: 1910px;
         }
     }
 `;
@@ -28,6 +28,6 @@ export const Title = styled.div`
     padding: 0 10px;
     z-index: 1;
     position: absolute;
-    top: 2068px;
+    top: 2110px;
     left: 25%;
 `;
